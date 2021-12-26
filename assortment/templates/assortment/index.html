@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flowers</title>
+</head>
+<body>
+<h1>Товар</h1>
+{% for item_assort in assortments %}
+<div>
+  <h2>{{ item_assort.name_product }}</h2>
+   <p>{{ item_assort.description_product }}</p>
+   <img src="{{ item_assort.photo_product.url }}" alt=" "  width="350">
+   <p>{{ item_assort.create_at|date:"d.m.Y" }}</p>
+
+</div>
+{% endfor %}
+</body>
+</html>
